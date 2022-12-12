@@ -6,6 +6,7 @@ export interface IProductsType {
 }
 
 export interface IOrderType {
-	total: number;
-	data: IProductsType[];
+	id: number;
+	quantity: number;
+	product: IProductsType;
 }

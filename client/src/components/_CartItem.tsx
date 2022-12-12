@@ -2,14 +2,15 @@ import * as React from 'react';
 import { IProductsType } from '../type';
 
 interface ICartItemProps {
+	_quantity: number;
 	product: IProductsType;
 	sum: number;
 	onHandleCheckSum: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const CartItem: React.FunctionComponent<ICartItemProps> = (props) => {
-	const { product, sum, onHandleCheckSum } = props;
-	const [quantity, setQuantity] = React.useState<number>(1);
+	const { product, sum, _quantity, onHandleCheckSum } = props;
+	const [quantity, setQuantity] = React.useState<number>(_quantity);
 
 	const handleChangeQuantity = (action: boolean, price: number) => {
 		switch (action) {
@@ -18,7 +19,7 @@ const CartItem: React.FunctionComponent<ICartItemProps> = (props) => {
 				setQuantity(quantity + 1);
 				break;
 			case false:
-				onHandleCheckSum(sum + price);
+				onHandleCheckSum(sum - price);
 				setQuantity(quantity - 1);
 				break;
 			default:
