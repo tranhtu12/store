@@ -4,3 +4,8 @@ export interface IProductsType {
 	price: number;
 	img: string;
 }
+
+export interface IOrderType {
+	total: number;
+	data: IProductsType[];
+}

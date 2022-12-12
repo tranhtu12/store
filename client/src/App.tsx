@@ -3,6 +3,7 @@ import * as apis from './apis/apis';
 import './App.css';
 import About from './components/_About';
 import Banner from './components/_Banner';
+import Cart from './components/_Cart';
 import Contact from './components/_Contact';
 import Footer from './components/_Footer';
 import Header from './components/_Header';

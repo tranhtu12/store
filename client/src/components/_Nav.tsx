@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Cart from './_Cart';
 
 interface INavProps {
 	data: string[];
@@ -6,6 +7,12 @@ interface INavProps {
 
 const Nav: React.FunctionComponent<INavProps> = (props) => {
 	const { data } = props;
+	const [isToogleShoppingCart, setIsToogleShoppingCart] = React.useState<boolean>(false);
+
+	const handleChangeToogle = () => {
+		setIsToogleShoppingCart(!isToogleShoppingCart);
+	};
+
 	return (
 		<>
 			<nav className="nav container">
@@ -29,13 +36,13 @@ const Nav: React.FunctionComponent<INavProps> = (props) => {
 					</div>
 				</div>
 
-				<div className="nav__btns">
+				<div className="nav__btns" onClick={handleChangeToogle}>
 					<i className="ri-moon-line change-theme" id="theme-button"></i>
-
 					<div className="nav__toggle" id="nav-toggle">
 						<i className="ri-menu-line"></i>
 					</div>
 				</div>
+				{isToogleShoppingCart && <Cart isStyle={isToogleShoppingCart} />}
 			</nav>
 		</>
 	);

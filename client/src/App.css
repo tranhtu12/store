@@ -3,7 +3,8 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-	--header-height: 3.5rem; /*56px*/
+	--header-height: 3.5rem;
+	/*56px*/
 
 	/*========== Colors ==========*/
 	/*Color mode HSL(hue, saturation, lightness)*/
@@ -83,7 +84,8 @@ body {
 	margin: var(--header-height) 0 0 0;
 	background-color: var(--body-color);
 	color: var(--text-color);
-	transition: 0.4s; /*For animation dark mode*/
+	transition: 0.4s;
+	/*For animation dark mode*/
 }
 
 button {
@@ -181,7 +183,8 @@ the website, in dark theme
 }
 
 .main {
-	overflow: hidden; /*For animation*/
+	overflow: hidden;
+	/*For animation*/
 }
 
 /*=============== HEADER ===============*/
@@ -192,7 +195,8 @@ the website, in dark theme
 	top: 0;
 	left: 0;
 	z-index: var(--z-fixed);
-	transition: 0.4s; /*For animation dark mode*/
+	transition: 0.4s;
+	/*For animation dark mode*/
 }
 
 /*=============== NAV ===============*/
@@ -201,6 +205,7 @@ the website, in dark theme
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 
 .nav__logo,
@@ -704,7 +709,7 @@ the website, in dark theme
 }
 
 /*Input focus move up label*/
-.contact__input:focus + .contact__label {
+.contact__input:focus+.contact__label {
 	top: -0.75rem;
 	left: 0;
 	font-size: var(--smaller-font-size);
@@ -712,7 +717,7 @@ the website, in dark theme
 }
 
 /*Input focus sticky top label*/
-.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label {
+.contact__input:not(:placeholder-shown).contact__input:not(:focus)+.contact__label {
 	top: -0.75rem;
 	font-size: var(--smaller-font-size);
 	z-index: 10;
@@ -799,6 +804,7 @@ the website, in dark theme
 	align-items: center;
 	column-gap: 0.5rem;
 }
+
 .footer__card {
 	width: 35px;
 }
@@ -861,6 +867,7 @@ the website, in dark theme
 	.home__img {
 		width: 180px;
 	}
+
 	.home__title {
 		font-size: var(--h1-font-size);
 	}
@@ -868,6 +875,7 @@ the website, in dark theme
 	.steps__bg {
 		padding: 2rem 1rem;
 	}
+
 	.steps__card {
 		padding: 1.5rem;
 	}
@@ -887,6 +895,7 @@ the website, in dark theme
 	.product__description {
 		padding: 0 4rem;
 	}
+
 	.product__container {
 		grid-template-columns: repeat(2, 170px);
 		justify-content: center;
@@ -907,14 +916,17 @@ the website, in dark theme
 		height: calc(var(--header-height) + 1.5rem);
 		column-gap: 3rem;
 	}
+
 	.nav__toggle,
 	.nav__close {
 		display: none;
 	}
+
 	.nav__list {
 		flex-direction: row;
 		column-gap: 3rem;
 	}
+
 	.nav__menu {
 		margin-left: auto;
 	}
@@ -930,13 +942,16 @@ the website, in dark theme
 	.home {
 		padding: 10rem 0 5rem;
 	}
+
 	.home__container {
 		align-items: center;
 	}
+
 	.home__img {
 		width: 280px;
 		order: 1;
 	}
+
 	.home__social {
 		top: 30%;
 	}
@@ -948,6 +963,7 @@ the website, in dark theme
 	.footer__container {
 		column-gap: 3rem;
 	}
+
 	.footer__subscribe {
 		width: initial;
 	}
@@ -963,6 +979,7 @@ the website, in dark theme
 	.section {
 		padding: 8rem 0 1rem;
 	}
+
 	.section__title,
 	.section__title-center {
 		font-size: var(--h1-font-size);
@@ -971,9 +988,11 @@ the website, in dark theme
 	.home {
 		padding: 13rem 0 5rem;
 	}
+
 	.home__img {
 		width: 350px;
 	}
+
 	.home__description {
 		padding-right: 7rem;
 	}
@@ -985,9 +1004,11 @@ the website, in dark theme
 	.steps__container {
 		grid-template-columns: repeat(3, 1fr);
 	}
+
 	.steps__bg {
 		padding: 3.5rem 2.5rem;
 	}
+
 	.steps__card-title {
 		font-size: var(--normal-font-size);
 	}
@@ -995,18 +1016,22 @@ the website, in dark theme
 	.product__description {
 		padding: 0 16rem;
 	}
+
 	.product__container {
 		padding: 4rem 0;
 		grid-template-columns: repeat(3, 185px);
 		gap: 4rem 6rem;
 	}
+
 	.product__img {
 		width: 160px;
 	}
+
 	.product__circle {
 		width: 110px;
 		height: 110px;
 	}
+
 	.product__title,
 	.product__price {
 		font-size: var(--normal-font-size);
@@ -1015,15 +1040,19 @@ the website, in dark theme
 	.questions__container {
 		padding: 1rem 0 4rem;
 	}
+
 	.questions__title {
 		text-align: initial;
 	}
+
 	.questions__group {
 		row-gap: 2rem;
 	}
+
 	.questions__header {
 		padding: 1rem;
 	}
+
 	.questions__description {
 		padding: 0 3.5rem 2.25rem 2.75rem;
 	}
@@ -1031,9 +1060,11 @@ the website, in dark theme
 	.footer__logo {
 		font-size: var(--h3-font-size);
 	}
+
 	.footer__container {
 		grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
 	}
+
 	.footer__copy {
 		margin: 7rem 0 2rem;
 	}
@@ -1044,13 +1075,16 @@ the website, in dark theme
 		right: -3rem;
 		row-gap: 4.5rem;
 	}
+
 	.home__social-follow {
 		font-size: var(--small-font-size);
 	}
+
 	.home__social-follow::after {
 		width: 1.5rem;
 		right: -60%;
 	}
+
 	.home__social-link {
 		font-size: 1.15rem;
 	}
